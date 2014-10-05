@@ -1,0 +1,61 @@
+<html
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.5-strict.dtd">
+<head>
+<style>
+table,th,td {
+	border: 10px solid white;
+	border-collapse: collapse;
+	border-spacing: 5px;
+	text-align: left
+}
+
+th,td {
+	padding: 9px;
+	text-align: left;
+	vertical-align: top
+}
+
+table.names tr:nth-child(odd) {
+	background-color: #f1f1c1;
+}
+
+table.names tr:nth-child(even) {
+	background-color: #ffffff;
+}
+
+table.names th {
+	background-color: #c1c1c1;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Seguidor de Carrera</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Nueva Materia</h1>
+		<br />
+		<form wicket:id="nuevaMateriaForm" class="form">
+			<fieldset>
+				<div class="form-group">
+					<label class="control-label" for="nombre">Nombre:</label> <p>
+					<div class="controls">
+						<input wicket:id="nombre" type="text" placeholder="Nombre materia"
+							class="form-control" />
+					</div>
+				</div>
+
+				<div wicket:id="feedbackPanel" class="alert alert-error"></div>
+
+				<div class="form-actions">
+					<button wicket:id="aceptar" type="submit" class="btn btn-primary">Aceptar</button>
+					<button wicket:id="cancelar" type="submit" class="btn">Cancelar</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<html
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.5-strict.dtd">
+<head>
+<style>
+table,th,td {
+	border: 10px solid white;
+	border-collapse: collapse;
+	border-spacing: 5px;
+	text-align: left
+}
+
+th,td {
+	padding: 9px;
+	text-align: left;
+	vertical-align: top
+}
+
+table.names tr:nth-child(odd) {
+	background-color: #f1f1c1;
+}
+
+table.names tr:nth-child(even) {
+	background-color: #ffffff;
+}
+
+table.names th {
+	background-color: #c1c1c1;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Seguidor de Carrera</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Seguidor de Carrrera</h1>
+		<br />
+		<form wicket:id="materiasForm" class="form-horizontal">
+			<table>
+				<tr>
+					<td width="40%">
+						<h4>Materias</h4> <br />
+						<table class="table table-striped table-bordered table-condensed">
+							<tbody>
+								<tr wicket:id="materias">
+									<td><span wicket:id="nombre">nombre</span></td>
+									<td width="7%">
+										<div class="btn-group">
+											<button wicket:id="editar" class="btn">Editar</button>
+										</div>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+						<div class="form-actions">
+							<button wicket:id="nueva" class="btn btn-success">Nueva
+								Materia</button>
+						</div>
+					</td>
+					<td width="60%">
+						<div class="form-group">
+							<p />
+							<label class="control-label">&nbsp&nbsp&nbsp&nbspMateria:&nbsp</label>
+							<span wicket:id="materiaSeleccionada.nombre">Nombre</span>
+							<p />
+							<br />
+							<table>
+								<tr>
+									<td width="22%"><label class="control-label">A&ntildeo
+											de cursada:</label></td>
+									<td width="14%"><input
+										wicket:id="materiaSeleccionada.anioCursada" type="text"
+										placeholder="AAAA" class="form-control" /></td>
+									<td width="7%"><label></label></td>
+									<td width="5%"><sub><input
+											wicket:id="materiaSeleccionada.finalAprobado" type="checkbox" /></sub></td>
+									<td width="30%"><label class="control-label">Final
+											Aprobado</label></td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<td><label class="control-label">Profesor de cursada:</label></td>
+									<td><input wicket:id="materiaSeleccionada.profesor"
+										type="text" placeholder="Nombre y Apellido"
+										class="form-control"></td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<td><label class="control-label">Ubicaci&oacute;n
+											materia: </label></td>
+									<td><select wicket:id="materiaSeleccionada.momentoCursada"
+										class="form-control"></select></td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<td><label class="control-label">Notas de cursada:</label>
+										<p>
+											<br />
+										<table
+											class="table table-striped table-bordered table-condensed">
+											<thead>
+												<tr>
+													<th id="main">Fecha</th>
+													<th id="main">Descripci&oacute;n</th>
+													<th id="main">Aprobado</th>
+													<th colspan=2>Acciones</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr wicket:id="materiaSeleccionada.notas">
+													<td><span wicket:id="fecha">fecha</span></td>
+													<td><span wicket:id="descripcion">descripcion</span></td>
+													<td width="13%"><sub><input wicket:id="aprobado"
+															type="checkbox" /></sub></td>
+													<td width="7%"><button wicket:id="editarNota"
+															class="btn">Editar</button></td>
+													<td width="9%"><button wicket:id="eliminarNota"
+															class="btn">Eliminar</button></td>
+												</tr>
+											</tbody>
+										</table>
+										<button wicket:id="nuevaNota" class="btn btn-success">Nueva
+											Nota</button></td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>

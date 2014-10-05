@@ -1,0 +1,72 @@
+<html
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.5-strict.dtd">
+<head>
+<style>
+table,th,td {
+	border: 10px solid white;
+	border-collapse: collapse;
+	border-spacing: 5px;
+	text-align: left
+}
+
+th,td {
+	padding: 9px;
+	text-align: left;
+	vertical-align: top
+}
+
+table.names tr:nth-child(odd) {
+	background-color: #f1f1c1;
+}
+
+table.names tr:nth-child(even) {
+	background-color: #ffffff;
+}
+
+table.names th {
+	background-color: #c1c1c1;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Seguidor de Carrera</title>
+</head>
+<body>
+	<div class="container">
+		<h1 wicket:id="titulo">Editar Nota</h1>
+		<br />
+		<form wicket:id="editarNota" class="form-horizontal">
+			<table>
+				<tr>
+					<td><label class="control-label">Fecha:</label></td>
+					<td><input wicket:id="fecha" type="text"
+						placeholder="DD/MM/AAAA" class="form-control"></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td><label class="control-label">Descripci&oacuten:</label></td>
+					<td><input wicket:id="descripcion" type="text"
+						placeholder=" TP-Parcial" class="form-control"></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td><sub><input wicket:id="aprobado" type="checkbox" /></sub></td>
+					<td><label class="control-label">Aprobado</label></td>
+				</tr>
+			</table>
+			<div wicket:id="feedbackPanel" class="alert alert-error"></div>
+			<div class="form-actions">
+				<button wicket:id="aceptar" type="submit" class="btn btn-primary"
+					style="width: 80px">Aceptar</button>
+				<button wicket:id="volver" type="submit" class="btn btn-primary"
+					style="width: 80px">Cancelar</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
